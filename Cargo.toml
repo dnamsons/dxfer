@@ -1,0 +1,10 @@
+[package]
+name = "dxfer"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dxf = "0.5.0"
+dxf2image = { version = "0.1", path = "./dxf2image" }

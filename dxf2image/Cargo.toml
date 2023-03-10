@@ -1,0 +1,25 @@
+[package]
+name = "dxf2image"
+version = "0.1.1"
+authors = ["Kohei Fujino <appleblueberrycherry@gmail.com>"]
+edition = "2018"
+readme = "README.md"
+categories = ["multimedia::images", "rendering"]
+keywords = ["cad", "dxf", "svg", "png", "graphics"]
+license-file = "LICENSE"
+description = "dxf2image is a fast and efficient dxf to image converter!"
+repository = "https://github.com/k-fujino-kohei/dxf2image"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0"
+dxf = { version = "0.5" }
+svgx = { path = "./svgx", version = "0.1.0" }
+resvg = { version = "0.18.0", optional = true }
+usvg = { version = "0.18.0", optional = true }
+tiny-skia = { version = "0.6.1", optional = true }
+
+[features]
+default = []
+png = ["resvg", "usvg", "tiny-skia"]
